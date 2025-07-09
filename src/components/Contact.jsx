@@ -96,7 +96,7 @@ function Contact() {
       </motion.a>
 
       <footer className="text-gray-400 text-sm text-center mt-auto pb-4">
-        &copy; 2024 Portfolio. Crafted with passion and modern technologies.
+        &copy; 2025 Portfolio. Crafted with passion and modern technologies.
       </footer>
     </motion.div>
   );

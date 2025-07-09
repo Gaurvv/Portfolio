@@ -12,6 +12,8 @@ function App() {
   const contactRef = useRef(null);
 
   return (
+    <>
+    <title>Gaurav's Portfolio</title>
     <div className="bg-gray-950">
       <NavBar
         scrollToHome={() => homeRef.current.scrollIntoView({ behavior: 'smooth' })}
@@ -25,6 +27,7 @@ function App() {
       <div ref={projectsRef} id="projects"><Projects /></div>
       <div ref={contactRef} id="contact"><Contact /></div>
     </div>
+    </>
   );
 }
 
