@@ -19,7 +19,7 @@ function Projects() {
       description:
         'A simple calculator for performing simple mathematical operations',
       technologies: ['Vue.js', 'Firebase', 'Tailwind CSS'],
-      link: '', // update this if needed
+      link: 'https://calculator-gauravz.vercel.app/', // update this if needed
     },
   ];
 
