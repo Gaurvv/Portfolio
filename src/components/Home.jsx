@@ -48,7 +48,7 @@ function Home({ scrollToProjects, scrollToContact }) {
         transition={{ delay: 0.6 }}
         viewport={{ once: false }}
       >
-        Hi, my name is Gaurav Dhungana. I'm from Nepal, a 17 years old full stack dev crafting slick, modern, and performant web apps 🛏️
+        Hi, my name is Gaurav Dhungana. I'm from Nepal, a 17 years old full stack dev crafting slick, modern, and performant web apps 🛎️
       </motion.p>
 
       <motion.div

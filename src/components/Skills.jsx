@@ -10,7 +10,7 @@ function Skills() {
       title: 'Frontend Development',
       percentage: 90,
       iconBgColor: 'bg-gradient-to-r from-blue-500 to-blue-700',
-      progressBarColor: 'bg-gradient-to-r from-blue-400 to-blue-600',
+      progressBarColor: 'bg-gradient-to-r from-blue-400 to-blue-600', // This is no longer used, but kept for consistency with original data structure
     },
     {
       id: 2,
@@ -18,7 +18,7 @@ function Skills() {
       title: 'UI/UX Design',
       percentage: 85,
       iconBgColor: 'bg-gradient-to-r from-purple-500 to-purple-700',
-      progressBarColor: 'bg-gradient-to-r from-purple-400 to-purple-600',
+      progressBarColor: 'bg-gradient-to-r from-purple-400 to-purple-600', // This is no longer used
     },
     {
       id: 3,
@@ -26,7 +26,7 @@ function Skills() {
       title: 'Backend Development',
       percentage: 80,
       iconBgColor: 'bg-gradient-to-r from-green-500 to-green-700',
-      progressBarColor: 'bg-gradient-to-r from-green-400 to-green-600',
+      progressBarColor: 'bg-gradient-to-r from-green-400 to-green-600', // This is no longer used
     },
     {
       id: 4,
@@ -34,12 +34,12 @@ function Skills() {
       title: 'Web Technologies',
       percentage: 95,
       iconBgColor: 'bg-gradient-to-r from-orange-500 to-red-600',
-      progressBarColor: 'bg-gradient-to-r from-orange-400 to-red-500',
+      progressBarColor: 'bg-gradient-to-r from-orange-400 to-red-500', // This is no longer used
     },
   ];
 
   return (
-    <div className="py-20  text-white font-inter px-4 sm:px-6 lg:px-8">
+    <div className="py-20 text-white font-inter px-4 sm:px-6 lg:px-8">
       <motion.div
         className="flex justify-center mb-12"
         initial={{ opacity: 0, y: 20 }}
@@ -47,7 +47,7 @@ function Skills() {
         transition={{ duration: 0.6 }}
         viewport={{ once: false }}
       >
-        <h1 className="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text  bg-gradient-to-r from-cyan-700 to-purple-500 ">
+        <h1 className="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-700 to-purple-500 ">
           Skills & Expertise
         </h1>
       </motion.div>
@@ -66,10 +66,7 @@ function Skills() {
               {skill.icon}
             </div>
             <h2 className="text-xl font-semibold mb-3 text-gray-100">{skill.title}</h2>
-            <div className="w-full bg-gray-700 rounded-full h-2.5 mb-2">
-              <div className={`${skill.progressBarColor} h-2.5 rounded-full`} style={{ width: `${skill.percentage}%` }}></div>
-            </div>
-            <p className="text-gray-300 text-sm">{skill.percentage}%</p>
+            {/* The progress bar and percentage display have been removed from here */}
           </motion.div>
         ))}
       </div>

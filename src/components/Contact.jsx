@@ -1,6 +1,7 @@
 import React from 'react';
 import { MdOutlineMail, MdOutlineLocationOn } from 'react-icons/md';
 import { FaGithub, FaFacebookF } from "react-icons/fa";
+import { FiDownload } from 'react-icons/fi'; // Import the download icon
 import { motion } from 'framer-motion';
 
 function Contact() {
@@ -83,14 +84,15 @@ function Contact() {
       </div>
 
       <motion.a
-        href="https://github.com/Gaurvv"
-        className='bg-gradient-to-r from-cyan-700 to-purple-500 text-white font-semibold py-3 px-8 rounded-md shadow-xl shadow-blue-500/50 hover:shadow-blue-500/70 transition-all duration-300 transform hover:scale-105 mb-20'
+        href="" // Replace with your actual CV download link
+        className='bg-gradient-to-r from-cyan-700 to-purple-500 text-white font-semibold py-3 px-8 rounded-md shadow-xl shadow-blue-500/50 hover:shadow-blue-500/70 transition-all duration-300 transform hover:scale-105 mb-20 flex items-center gap-2' // Added flex and gap for icon spacing
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.6 }}
         viewport={{ once: false }}
       >
-        View All Projects
+        <FiDownload className="text-xl" /> {/* Download icon */}
+        Download CV
       </motion.a>
 
       <footer className="text-gray-400 text-sm text-center mt-auto pb-4">
@@ -101,4 +103,3 @@ function Contact() {
 }
 
 export default Contact;
-    
