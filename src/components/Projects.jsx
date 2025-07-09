@@ -7,17 +7,19 @@ function Projects() {
       id: 1,
       image: 'E-com.png',
       title: 'E-Commerce Website',
-      description: 'A full-stack e-commerce solution with modern UI/UX, payment integration, and admin dashboard.',
+      description:
+        'A full-stack e-commerce solution with modern UI/UX, payment integration, and admin dashboard.',
       technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-      link: '', // add your real link here
+      link: 'https://ecom-gauravz.vercel.app/', // ✅ correct link here
     },
     {
       id: 2,
       image: 'Cal.png',
       title: 'Simple Calculator',
-      description: 'A simple calculator for performing simple mathematical operations',
+      description:
+        'A simple calculator for performing simple mathematical operations',
       technologies: ['Vue.js', 'Firebase', 'Tailwind CSS'],
-      link: 'https://your-calculator-site.com', // add your real link here
+      link: 'https://your-calculator-site.com', // update this if needed
     },
   ];
 
@@ -55,14 +57,19 @@ function Projects() {
                 className="w-full h-48 object-cover lg:h-full rounded-t-xl lg:rounded-l-xl lg:rounded-tr-none"
                 onError={(e) => {
                   e.target.onerror = null;
-                  e.target.src = 'https://placehold.co/600x400/1a202c/e2e8f0?text=Image+Error';
+                  e.target.src =
+                    'https://placehold.co/600x400/1a202c/e2e8f0?text=Image+Error';
                 }}
               />
             </div>
             <div className="lg:w-1/2 p-6 flex flex-col justify-between">
               <div>
-                <h2 className="text-2xl font-semibold mb-2 text-gray-100">{project.title}</h2>
-                <p className="text-gray-300 mb-4 text-sm leading-relaxed">{project.description}</p>
+                <h2 className="text-2xl font-semibold mb-2 text-gray-100">
+                  {project.title}
+                </h2>
+                <p className="text-gray-300 mb-4 text-sm leading-relaxed">
+                  {project.description}
+                </p>
               </div>
               <div className="flex flex-wrap gap-2 mt-4">
                 {project.technologies.map((tech, index) => (
