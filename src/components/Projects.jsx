@@ -19,7 +19,7 @@ function Projects() {
       description:
         'A simple calculator for performing simple mathematical operations',
       technologies: ['Vue.js', 'Firebase', 'Tailwind CSS'],
-      link: 'https://github.com/Gaurvv', // update this if needed
+      link: '', // update this if needed
     },
   ];
 

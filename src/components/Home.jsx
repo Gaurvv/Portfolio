@@ -2,7 +2,7 @@ import React from 'react';
 import { TbBracketsAngle } from 'react-icons/tb';
 import { motion } from 'framer-motion';
 
-function Home() {
+function Home({ scrollToProjects, scrollToContact }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -48,7 +48,7 @@ function Home() {
         transition={{ delay: 0.6 }}
         viewport={{ once: false }}
       >
-        Crafting digital experiences with modern technologies and creative solutions
+        Hi, my name is Gaurav Dhungana. I'm from Nepal, a 17 years old full stack dev crafting slick, modern, and performant web apps 🛏️
       </motion.p>
 
       <motion.div
@@ -58,10 +58,16 @@ function Home() {
         transition={{ delay: 0.8 }}
         viewport={{ once: false }}
       >
-        <button className='bg-gradient-to-r from-cyan-700 to-purple-500 text-gray-100 font-semibold py-3 px-8 rounded-md shadow-xl shadow-cyan-500/70 hover:shadow-cyan-500/90 transition-all duration-300 transform hover:scale-105'>
+        <button
+          onClick={scrollToProjects}
+          className='bg-gradient-to-r from-cyan-700 to-purple-500 text-gray-100 font-semibold py-3 px-8 rounded-md shadow-xl shadow-cyan-500/70 hover:shadow-cyan-500/90 transition-all duration-300 transform hover:scale-105'
+        >
           View My Work
         </button>
-        <button className='border-2 border-cyan-500 text-cyan-500 font-semibold py-3 px-8 rounded-md hover:bg-cyan-500 hover:text-gray-900 hover:shadow-xl hover:shadow-cyan-500/70 transition-all duration-300 transform hover:scale-105'>
+        <button
+          onClick={scrollToContact}
+          className='border-2 border-cyan-500 text-cyan-500 font-semibold py-3 px-8 rounded-md hover:bg-cyan-500 hover:text-gray-900 hover:shadow-xl hover:shadow-cyan-500/70 transition-all duration-300 transform hover:scale-105'
+        >
           Get In Touch
         </button>
       </motion.div>
