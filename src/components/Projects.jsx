@@ -21,6 +21,15 @@ function Projects() {
       technologies: ['Vue.js', 'Firebase', 'Tailwind CSS'],
       link: 'https://calculator-gauravz.vercel.app/', // update this if needed
     },
+    {
+      id: 3,
+      image: 'Cal.png',
+      title: 'simple Todo website',
+      description:
+        'A simple to Do website where u can add your routine, notes and  to do list',
+      technologies: ['Vue.js', 'Firebase', 'Tailwind CSS'],
+      link: 'https://todo-gaurav.vercel.app/', // update this if needed
+    },
   ];
 
   return (
