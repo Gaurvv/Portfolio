@@ -1,40 +1,57 @@
 import React from 'react';
-import { TbBracketsAngle, TbPalette, TbServer, TbWorld } from 'react-icons/tb';
 import { motion } from 'framer-motion';
+import {
+  TbBrandReact,
+  TbBrandGithub,
+  TbServer,
+  TbBrandMongodb,
+  TbPalette,
+  TbBrandJavascript
+} from 'react-icons/tb';
 
 function Skills() {
   const skillsData = [
     {
       id: 1,
-      icon: <TbBracketsAngle className="text-white text-3xl" />,
-      title: 'Frontend Development',
-      percentage: 90,
+      icon: <TbBrandReact className="text-white text-3xl" />,
+      title: 'React',
+      description: 'Building interactive user interfaces',
       iconBgColor: 'bg-gradient-to-r from-blue-500 to-blue-700',
-      progressBarColor: 'bg-gradient-to-r from-blue-400 to-blue-600', // This is no longer used, but kept for consistency with original data structure
     },
     {
       id: 2,
-      icon: <TbPalette className="text-white text-3xl" />,
-      title: 'UI/UX Design',
-      percentage: 85,
+      icon: <TbBrandGithub className="text-white text-3xl" />,
+      title: 'Git/GitHub',
+      description: 'Version control and collaboration',
       iconBgColor: 'bg-gradient-to-r from-purple-500 to-purple-700',
-      progressBarColor: 'bg-gradient-to-r from-purple-400 to-purple-600', // This is no longer used
     },
     {
       id: 3,
       icon: <TbServer className="text-white text-3xl" />,
-      title: 'Backend Development',
-      percentage: 80,
+      title: 'Express',
+      description: 'Backend web application framework',
       iconBgColor: 'bg-gradient-to-r from-green-500 to-green-700',
-      progressBarColor: 'bg-gradient-to-r from-green-400 to-green-600', // This is no longer used
     },
     {
       id: 4,
-      icon: <TbWorld className="text-white text-3xl" />,
-      title: 'Web Technologies',
-      percentage: 95,
+      icon: <TbBrandMongodb className="text-white text-3xl" />,
+      title: 'MongoDB',
+      description: 'NoSQL database management',
+      iconBgColor: 'bg-gradient-to-r from-teal-500 to-teal-700',
+    },
+    {
+      id: 5,
+      icon: <TbPalette className="text-white text-3xl" />,
+      title: 'Tailwind CSS',
+      description: 'Utility-first CSS framework',
       iconBgColor: 'bg-gradient-to-r from-orange-500 to-red-600',
-      progressBarColor: 'bg-gradient-to-r from-orange-400 to-red-500', // This is no longer used
+    },
+    {
+      id: 6,
+      icon: <TbBrandJavascript className="text-white text-3xl" />,
+      title: 'JavaScript',
+      description: 'Core web programming language',
+      iconBgColor: 'bg-gradient-to-r from-yellow-500 to-yellow-700',
     },
   ];
 
@@ -52,7 +69,7 @@ function Skills() {
         </h1>
       </motion.div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8 max-w-6xl mx-auto">
         {skillsData.map((skill) => (
           <motion.div
             key={skill.id}
@@ -65,8 +82,8 @@ function Skills() {
             <div className={`w-16 h-16 ${skill.iconBgColor} rounded-full flex items-center justify-center mb-4 shadow-md`}>
               {skill.icon}
             </div>
-            <h2 className="text-xl font-semibold mb-3 text-gray-100">{skill.title}</h2>
-            {/* The progress bar and percentage display have been removed from here */}
+            <h2 className="text-xl font-semibold mb-2 text-gray-100">{skill.title}</h2>
+            <p className="text-gray-400 text-sm">{skill.description}</p>
           </motion.div>
         ))}
       </div>

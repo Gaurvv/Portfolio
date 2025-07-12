@@ -9,7 +9,7 @@ function Projects() {
       title: 'E-Commerce Website',
       description:
         'A full-stack e-commerce solution with modern UI/UX, payment integration, and admin dashboard.',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
+      technologies: ['React', 'tailwind css', 'MongoDB', 'express'],
       link: 'https://ecom-gauravz.vercel.app/', // ✅ correct link here
     },
     {
@@ -18,16 +18,16 @@ function Projects() {
       title: 'Simple Calculator',
       description:
         'A simple calculator for performing simple mathematical operations',
-      technologies: ['Vue.js', 'Firebase', 'Tailwind CSS'],
+      technologies: ['React', 'Tailwind CSS'],
       link: 'https://calculator-gauravz.vercel.app/', // update this if needed
     },
     {
       id: 3,
-      image: 'Cal.png',
+      image: 'toDo.png',
       title: 'simple Todo website',
       description:
         'A simple to Do website where u can add your routine, notes and  to do list',
-      technologies: ['Vue.js', 'Firebase', 'Tailwind CSS'],
+      technologies: ['React', 'Supabase', 'Tailwind CSS'],
       link: 'https://todo-gaurav.vercel.app/', // update this if needed
     },
   ];
