@@ -1,18 +1,48 @@
 import React from 'react';
 import { MdOutlineMail, MdOutlineLocationOn } from 'react-icons/md';
 import { FaGithub, FaFacebookF } from "react-icons/fa";
-import { FiDownload } from 'react-icons/fi'; // Import the download icon
+import { FiDownload } from 'react-icons/fi';
 import { motion } from 'framer-motion';
 
 function Contact() {
+  const contactDetails = [
+    {
+      icon: <MdOutlineMail className="text-white text-3xl" />,
+      title: 'Email',
+      content: 'GauravDhungana294@gmail.com',
+      gradient: 'from-cyan-500 to-purple-500'
+    },
+    {
+      icon: <FaGithub className="text-white text-3xl" />,
+      title: 'GitHub',
+      content: 'Gaurvv',
+      link: 'https://github.com/Gaurvv',
+      gradient: 'from-cyan-500 to-purple-500'
+    },
+    {
+      icon: <FaFacebookF className="text-white text-3xl" />,
+      title: 'Facebook',
+      content: 'Gaurav Dhungana',
+      link: 'https://www.facebook.com/gaurav.dhungana.18',
+      gradient: 'from-cyan-500 to-purple-500'
+    },
+    {
+      icon: <MdOutlineLocationOn className="text-white text-3xl" />,
+      title: 'Location',
+      content: 'Nepal',
+      gradient: 'from-cyan-500 to-purple-500'
+    },
+  ];
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.6 }}
       viewport={{ once: false }}
-      className="min-h-screen text-white font-inter p-4 sm:p-6 lg:p-8 flex flex-col items-center justify-center"
+      className="min-h-screen text-white font-inter p-4 sm:p-6 lg:p-8 flex flex-col items-center justify-center bg-black"
     >
+      {/* Heading */}
       <motion.div
         className="flex justify-center mt-10 mb-6"
         initial={{ y: -30, opacity: 0 }}
@@ -20,11 +50,12 @@ function Contact() {
         transition={{ duration: 0.6 }}
         viewport={{ once: false }}
       >
-        <h1 className="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-700 to-purple-500">
+        <h1 className="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-purple-500">
           Let's Work Together
         </h1>
       </motion.div>
 
+      {/* Subtitle */}
       <motion.p
         className="text-lg text-center max-w-2xl px-4 leading-relaxed text-gray-300 mb-12"
         initial={{ opacity: 0 }}
@@ -35,21 +66,9 @@ function Contact() {
         Ready to bring your ideas to life? Let's discuss how we can create something amazing together.
       </motion.p>
 
+      {/* Contact Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-xl mx-auto mb-12">
-        {[
-          {
-            icon: <MdOutlineMail className="text-white text-3xl" />, title: 'Email', content: 'GauravDhungana294@gmail.com', gradient: 'from-blue-500 to-blue-700'
-          },
-          {
-            icon: <FaGithub className="text-white text-3xl" />, title: 'GitHub', content: 'Gaurvv', link: 'https://github.com/Gaurvv', gradient: 'from-purple-500 to-blue-700'
-          },
-          {
-            icon: <FaFacebookF className="text-white text-3xl" />, title: 'Facebook', content: 'Gaurav Dhungana', link: 'https://www.facebook.com/gaurav.dhungana.18', gradient: 'from-blue-500 to-cyan-700'
-          },
-          {
-            icon: <MdOutlineLocationOn className="text-white text-3xl" />, title: 'Location', content: 'Nepal', gradient: 'from-purple-500 to-purple-700'
-          },
-        ].map((item, i) => (
+        {contactDetails.map((item, i) => (
           <motion.div
             key={i}
             initial={{ opacity: 0, y: 20 }}
@@ -62,7 +81,7 @@ function Contact() {
                 href={item.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-gray-800 rounded-xl shadow-lg p-6 flex flex-col items-center text-center transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl border border-gray-700 no-underline"
+                className="bg-gradient-to-br from-black to-gray-900 rounded-xl shadow-lg p-6 flex flex-col items-center text-center transition-transform duration-300 hover:scale-105 hover:shadow-2xl border border-gray-700"
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${item.gradient} rounded-full flex items-center justify-center mb-4 shadow-md`}>
                   {item.icon}
@@ -71,7 +90,7 @@ function Contact() {
                 <p className="text-gray-300 text-sm">{item.content}</p>
               </a>
             ) : (
-              <div className="bg-gray-800 rounded-xl shadow-lg p-6 flex flex-col items-center text-center transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl border border-gray-700">
+              <div className="bg-gradient-to-br from-black to-gray-900 rounded-xl shadow-lg p-6 flex flex-col items-center text-center transition-transform duration-300 hover:scale-105 hover:shadow-2xl border border-gray-700">
                 <div className={`w-16 h-16 bg-gradient-to-r ${item.gradient} rounded-full flex items-center justify-center mb-4 shadow-md`}>
                   {item.icon}
                 </div>
@@ -83,20 +102,23 @@ function Contact() {
         ))}
       </div>
 
+      {/* Download CV */}
       <motion.a
-        href="" // Replace with your actual CV download link
-        className='bg-gradient-to-r from-cyan-700 to-purple-500 text-white font-semibold py-3 px-8 rounded-md shadow-xl shadow-blue-500/50 hover:shadow-blue-500/70 transition-all duration-300 transform hover:scale-105 mb-20 flex items-center gap-2' // Added flex and gap for icon spacing
+        href="/final-cv.pdf"
+        download="Gaurav_Dhungana_CV"
+        className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold py-3 px-8 rounded-md shadow-xl hover:shadow-purple-500/70 transition-all duration-300 transform hover:scale-105 mb-20 flex items-center gap-2"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.6 }}
         viewport={{ once: false }}
       >
-        <FiDownload className="text-xl" /> {/* Download icon */}
+        <FiDownload className="text-xl" />
         Download CV
       </motion.a>
 
-      <footer className="text-gray-400 text-sm text-center mt-auto pb-4">
-        &copy; 2025 Portfolio. Crafted with passion and modern technologies.
+      {/* Footer */}
+      <footer className="text-gray-500 text-sm text-center mt-auto pb-4">
+        &copy; 
       </footer>
     </motion.div>
   );

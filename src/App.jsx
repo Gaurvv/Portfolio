@@ -4,6 +4,7 @@ import Home from './components/Home';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
+import './App.css'; //
 
 function App() {
   const homeRef = useRef(null);
@@ -11,23 +12,38 @@ function App() {
   const projectsRef = useRef(null);
   const contactRef = useRef(null);
 
+  const scrollToRef = (ref) => {
+    ref.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
-    <>
-    <title>Gaurav's Portfolio</title>
-    <div className="bg-gray-950">
+    <div className="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 min-h-screen text-white">
       <NavBar
-        scrollToHome={() => homeRef.current.scrollIntoView({ behavior: 'smooth' })}
-        scrollToSkills={() => skillsRef.current.scrollIntoView({ behavior: 'smooth' })}
-        scrollToProjects={() => projectsRef.current.scrollIntoView({ behavior: 'smooth' })}
-        scrollToContact={() => contactRef.current.scrollIntoView({ behavior: 'smooth' })}
+        scrollToHome={() => scrollToRef(homeRef)}
+        scrollToSkills={() => scrollToRef(skillsRef)}
+        scrollToProjects={() => scrollToRef(projectsRef)}
+        scrollToContact={() => scrollToRef(contactRef)}
       />
 
-      <div ref={homeRef} id="home"><Home scrollToProjects={() => projectsRef.current.scrollIntoView({ behavior: 'smooth' })} scrollToContact={() => contactRef.current.scrollIntoView({ behavior: 'smooth' })} /></div>
-      <div ref={skillsRef} id="skills"><Skills /></div>
-      <div ref={projectsRef} id="projects"><Projects /></div>
-      <div ref={contactRef} id="contact"><Contact /></div>
+      <div ref={homeRef} id="home" className="animate-fade-in-up delay-200">
+        <Home
+          scrollToProjects={() => scrollToRef(projectsRef)}
+          scrollToContact={() => scrollToRef(contactRef)}
+        />
+      </div>
+
+      <div ref={skillsRef} id="skills" className="animate-fade-in-up delay-400">
+        <Skills />
+      </div>
+
+      <div ref={projectsRef} id="projects" className="animate-fade-in-up delay-600">
+        <Projects />
+      </div>
+
+      <div ref={contactRef} id="contact" className="animate-fade-in-up delay-1000">
+        <Contact />
+      </div>
     </div>
-    </>
   );
 }
 

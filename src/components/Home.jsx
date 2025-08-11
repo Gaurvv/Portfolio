@@ -1,77 +1,68 @@
 import React from 'react';
 import { TbBracketsAngle } from 'react-icons/tb';
-import { motion } from 'framer-motion';
 
 function Home({ scrollToProjects, scrollToContact }) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-      viewport={{ once: false }}
-      className='text-gray-100 min-h-screen flex flex-col items-center justify-center'
-    >
-      <motion.div
-        className="flex justify-center mb-8"
-        initial={{ scale: 0 }}
-        whileInView={{ scale: 1 }}
-        transition={{ type: 'spring', stiffness: 120 }}
-        viewport={{ once: false }}
-      >
-        <TbBracketsAngle className='bg-gradient-to-r from-cyan-700 to-purple-500 text-gray-100 w-24 h-24 rounded-full flex items-center justify-center text-5xl shadow-lg shadow-cyan-500/50' />
-      </motion.div>
+    <div className='text-slate-100 min-h-screen flex flex-col items-center justify-center relative overflow-hidden pt-20 px-4 sm:px-6'>
+      
+      {/* Background Animation */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-emerald-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-violet-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl animate-ping delay-500"></div>
+      </div>
 
-      <motion.h1
-        className='font-bold text-7xl bg-gradient-to-r from-cyan-700 to-purple-500 bg-clip-text text-transparent text-center mb-2'
-        initial={{ opacity: 0, y: -30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.2 }}
-        viewport={{ once: false }}
-      >
-        Hello Visitors
-      </motion.h1>
+      {/* Content */}
+      <div className="relative z-10 flex flex-col items-center">
+        
+        {/* Icon */}
+        <div className="flex justify-center mb-8 group">
+          <div className="relative">
+            <TbBracketsAngle className='bg-gradient-to-br from-emerald-400 via-cyan-500 to-violet-500 text-slate-900 w-24 h-24 rounded-3xl flex items-center justify-center text-5xl shadow-2xl shadow-emerald-500/30 transition-all duration-500 group-hover:scale-110 group-hover:rotate-12' />
+            <div className="absolute inset-0 bg-gradient-to-br from-emerald-400 via-cyan-500 to-violet-500 rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
+          </div>
+        </div>
 
-      <motion.h1
-        className='font-bold text-7xl text-center text-cyan-500 shadow-cyan-500/50 mb-6'
-        initial={{ opacity: 0, y: -30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.4 }}
-        viewport={{ once: false }}
-      >
-        Welcome
-      </motion.h1>
+        {/* Headings */}
+        <h1 className='font-bold text-6xl md:text-7xl lg:text-8xl bg-gradient-to-r from-emerald-400 via-cyan-500 to-violet-500 bg-clip-text text-transparent text-center mb-2 animate-fade-in-up'>
+          Hello I'm 
+        </h1>
 
-      <motion.p
-        className='text-xl text-center max-w-2xl px-4 leading-relaxed text-gray-300'
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ delay: 0.6 }}
-        viewport={{ once: false }}
-      >
-        Hi, my name is Gaurav Dhungana. I'm from Nepal, a 17 years old full stack dev crafting slick, modern, and performant web apps 🛎️
-      </motion.p>
+        <h2 className='font-bold text-5xl md:text-6xl lg:text-7xl text-center text-emerald-400 mb-6 animate-fade-in-up delay-200'>
+          GAURAV
+        </h2>
 
-      <motion.div
-        className="flex justify-center gap-8 mt-10"
-        initial={{ opacity: 0, scale: 0.95 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 0.8 }}
-        viewport={{ once: false }}
-      >
-        <button
-          onClick={scrollToProjects}
-          className='bg-gradient-to-r from-cyan-700 to-purple-500 text-gray-100 font-semibold py-3 px-8 rounded-md shadow-xl shadow-cyan-500/70 hover:shadow-cyan-500/90 transition-all duration-300 transform hover:scale-105'
-        >
-          View My Work
-        </button>
-        <button
-          onClick={scrollToContact}
-          className='border-2 border-cyan-500 text-cyan-500 font-semibold py-3 px-8 rounded-md hover:bg-cyan-500 hover:text-gray-900 hover:shadow-xl hover:shadow-cyan-500/70 transition-all duration-300 transform hover:scale-105'
-        >
-          Get In Touch
-        </button>
-      </motion.div>
-    </motion.div>
+        {/* About Text */}
+        <p className='text-lg md:text-xl text-center max-w-3xl px-4 leading-relaxed text-slate-300 mb-10 animate-fade-in-up delay-400'>
+          Hi, my name is <span className="text-emerald-400 font-semibold">Gaurav Dhungana</span>. 
+          I'm from Nepal — a <span className="text-cyan-400 font-semibold">17-year-old full stack developer</span> 
+          crafting slick, modern, and performant web apps with passion ✨
+        </p>
+
+        {/* Buttons */}
+        <div className="flex flex-col sm:flex-row justify-center gap-6 mt-10 animate-fade-in-up delay-600">
+          <button
+            onClick={scrollToProjects}
+            className='group relative bg-gradient-to-r from-emerald-500 via-cyan-500 to-violet-500 text-slate-900 font-semibold py-4 px-8 rounded-2xl shadow-2xl shadow-emerald-500/30 hover:shadow-emerald-500/50 transition-all duration-500 transform hover:scale-105 hover:-translate-y-1'
+          >
+            <span className="relative z-10">View My Work</span>
+            <div className="absolute inset-0 bg-gradient-to-r from-emerald-600 via-cyan-600 to-violet-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          </button>
+          
+          <button
+            onClick={scrollToContact}
+            className='group relative border-2 border-emerald-500/50 bg-slate-900/50 backdrop-blur-sm text-emerald-400 font-semibold py-4 px-8 rounded-2xl hover:bg-emerald-500 hover:text-slate-900 hover:shadow-2xl hover:shadow-emerald-500/50 transition-all duration-500 transform hover:scale-105 hover:-translate-y-1'
+          >
+            Get In Touch
+          </button>
+        </div>
+      </div>
+
+      {/* Floating Dots */}
+      <div className="absolute top-1/4 left-10 w-2 h-2 bg-emerald-400 rounded-full animate-ping delay-1000"></div>
+      <div className="absolute top-1/3 right-10 w-3 h-3 bg-cyan-400 rounded-full animate-ping delay-1500"></div>
+      <div className="absolute bottom-1/4 left-1/4 w-2 h-2 bg-violet-400 rounded-full animate-ping delay-2000"></div>
+    </div>
   );
 }
 
