@@ -17,7 +17,7 @@ function App() {
   };
 
   return (
-    <div className="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 min-h-screen text-white">
+    <div className="bg-gray-50 min-h-screen text-black">
       <NavBar
         scrollToHome={() => scrollToRef(homeRef)}
         scrollToSkills={() => scrollToRef(skillsRef)}
