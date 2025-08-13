@@ -20,7 +20,7 @@ function Projects() {
     },
     {
       id: 3,
-      image: 'todo.png',
+      image: 'toDo.png',
       title: 'Todo Website',
       description: 'A simple todo website where you can add your routine, notes and to-do list with real-time sync.',
       technologies: ['React', 'Supabase', 'Tailwind CSS'],
