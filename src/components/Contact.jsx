@@ -1,7 +1,6 @@
 import React from "react";
 import { MdOutlineMail, MdOutlineLocationOn } from "react-icons/md";
 import { FaGithub, FaFacebookF } from "react-icons/fa";
-import { FiDownload } from "react-icons/fi";
 
 function Contact() {
   const contactDetails = [
