@@ -34,21 +34,20 @@ function Contact() {
   return (
     <div className="min-h-screen font-sans px-6 py-20 flex flex-col items-center text-black opacity-100 transition-opacity duration-500">
       {/* Heading */}
-      <div className="mb-8">
-        <h1 className="text-5xl font-thin uppercase tracking-widest text-center mb-2">
+      <div className="mb-16">
+        <h1 className="font-thin text-5xl sm:text-6xl md:text-7xl text-center tracking-widest uppercase">
           Let's Work Together
         </h1>
-        {/* Removed underline */}
       </div>
 
       {/* Subtitle */}
-      <p className="max-w-xl text-center text-gray-700 font-light mb-12 leading-relaxed">
+      <p className="max-w-2xl text-center text-gray-700 font-light mb-16 leading-relaxed text-lg">
         Ready to bring your ideas to life? Let's discuss how we can create
         something amazing together.
       </p>
 
       {/* Contact Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 max-w-4xl w-full mb-16">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 max-w-5xl w-full">
         {contactDetails.map((item, i) =>
           item.link ? (
             <a
@@ -56,28 +55,28 @@ function Contact() {
               href={item.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-white rounded-2xl shadow-md p-6 flex flex-col items-center text-center transition-transform duration-300 hover:scale-105 hover:shadow-lg border border-gray-200"
+              className="bg-white rounded-2xl shadow-md p-8 flex flex-col items-center text-center transition-transform duration-300 hover:scale-105 hover:shadow-lg border border-gray-200"
             >
-              <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mb-4 shadow-sm text-black">
+              <div className="w-18 h-18 bg-gray-200 rounded-full flex items-center justify-center mb-6 shadow-sm text-black">
                 {item.icon}
               </div>
-              <h2 className="text-xl font-thin uppercase tracking-widest mb-2">
+              <h2 className="text-2xl font-thin uppercase tracking-widest mb-3">
                 {item.title}
               </h2>
-              <p className="text-gray-700 text-sm font-light">{item.content}</p>
+              <p className="text-gray-700 text-base font-light">{item.content}</p>
             </a>
           ) : (
             <div
               key={i}
-              className="bg-white rounded-2xl shadow-md p-6 flex flex-col items-center text-center border border-gray-200"
+              className="bg-white rounded-2xl shadow-md p-8 flex flex-col items-center text-center border border-gray-200"
             >
-              <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mb-4 shadow-sm text-black">
+              <div className="w-18 h-18 bg-gray-200 rounded-full flex items-center justify-center mb-6 shadow-sm text-black">
                 {item.icon}
               </div>
-              <h2 className="text-xl font-thin uppercase tracking-widest mb-2">
+              <h2 className="text-2xl font-thin uppercase tracking-widest mb-3">
                 {item.title}
               </h2>
-              <p className="text-gray-700 text-sm font-light">{item.content}</p>
+              <p className="text-gray-700 text-base font-light">{item.content}</p>
             </div>
           )
         )}

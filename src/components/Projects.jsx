@@ -34,10 +34,9 @@ function Projects() {
   ];
 
   return (
-    <section className="relative min-h-screen pt-24 px-4 sm:px-6 lg:px-8 font-sans text-black overflow-hidden">
-      {/* Content */}
+    <section className="relative min-h-screen pt-24 pb-12 px-4 sm:px-6 lg:px-8 font-sans text-black overflow-hidden">
       <div className="relative z-10 max-w-7xl mx-auto">
-        <div className="flex justify-center mb-16">
+        <div className="flex justify-center mb-12">
           <h1 className="font-thin text-5xl sm:text-6xl md:text-7xl text-center tracking-widest uppercase">
             Featured Projects
           </h1>
@@ -45,30 +44,50 @@ function Projects() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10">
           {projectsData.map((project) => (
-            <a
+            <div
               key={project.id}
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
               className="group relative rounded-3xl overflow-hidden bg-white shadow-md hover:shadow-lg hover:scale-105 transition-transform duration-300"
             >
-              {/* Image */}
               <div className="overflow-hidden rounded-t-3xl">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
-                />
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </a>
               </div>
 
-              {/* Info */}
               <div className="p-6">
-                <h2 className="text-2xl font-thin mb-3 uppercase tracking-widest group-hover:text-emerald-500 transition-colors duration-300">
-                  {project.title}
-                </h2>
+                <div className="flex items-center justify-between mb-3">
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <h2 className="text-2xl font-thin uppercase tracking-widest group-hover:text-emerald-500 transition-colors duration-300">
+                      {project.title}
+                    </h2>
+                  </a>
+                  
+                  <a
+                    href="https://github.com/Gaurvv"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-gray-100 hover:bg-gray-200 p-2 rounded-full transition-all duration-300 hover:scale-110"
+                  >
+                    <FiGithub className="text-gray-600 hover:text-black text-lg transition-colors duration-300" />
+                  </a>
+                </div>
+
                 <p className="text-gray-700 text-base font-light mb-6 leading-relaxed">
                   {project.description}
                 </p>
+
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech, index) => (
                     <span
@@ -80,17 +99,8 @@ function Projects() {
                   ))}
                 </div>
               </div>
-            </a>
+            </div>
           ))}
-          <div className="  col-span-full flex justify-center mt-10  ">
-            <a
-              href="https://github.com/Gaurvv"
-              className="bg-black text-white font-semibold py-3 px-10 rounded-md shadow hover:bg-gray-900 transition-all duration-300 transform hover:scale-105 flex items-center gap-3"
-            >
-              <FiGithub className="text-2xl" />
-              Visit GitHub
-            </a>
-          </div>
         </div>
       </div>
     </section>
