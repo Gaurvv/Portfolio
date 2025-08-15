@@ -1,32 +1,32 @@
-import React from 'react';
-import { MdOutlineMail, MdOutlineLocationOn } from 'react-icons/md';
-import { FaGithub, FaFacebookF } from 'react-icons/fa';
-import { FiDownload } from 'react-icons/fi';
+import React from "react";
+import { MdOutlineMail, MdOutlineLocationOn } from "react-icons/md";
+import { FaGithub, FaFacebookF } from "react-icons/fa";
+import { FiDownload } from "react-icons/fi";
 
 function Contact() {
   const contactDetails = [
     {
       icon: <MdOutlineMail className="text-black text-3xl" />,
-      title: 'Email',
-      content: 'GauravDhungana294@gmail.com',
+      title: "Email",
+      content: "GauravDhungana294@gmail.com",
       link: null,
     },
     {
       icon: <FaGithub className="text-black text-3xl" />,
-      title: 'GitHub',
-      content: 'Gaurvv',
-      link: 'https://github.com/Gaurvv',
+      title: "GitHub",
+      content: "Gaurvv",
+      link: "https://github.com/Gaurvv",
     },
     {
       icon: <FaFacebookF className="text-black text-3xl" />,
-      title: 'Facebook',
-      content: 'Gaurav Dhungana',
-      link: 'https://www.facebook.com/gaurav.dhungana.18',
+      title: "Facebook",
+      content: "Gaurav Dhungana",
+      link: "https://www.facebook.com/gaurav.dhungana.18",
     },
     {
       icon: <MdOutlineLocationOn className="text-black text-3xl" />,
-      title: 'Location',
-      content: 'Nepal',
+      title: "Location",
+      content: "Nepal",
       link: null,
     },
   ];
@@ -43,7 +43,8 @@ function Contact() {
 
       {/* Subtitle */}
       <p className="max-w-xl text-center text-gray-700 font-light mb-12 leading-relaxed">
-        Ready to bring your ideas to life? Let's discuss how we can create something amazing together.
+        Ready to bring your ideas to life? Let's discuss how we can create
+        something amazing together.
       </p>
 
       {/* Contact Cards */}
@@ -60,7 +61,9 @@ function Contact() {
               <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mb-4 shadow-sm text-black">
                 {item.icon}
               </div>
-              <h2 className="text-xl font-thin uppercase tracking-widest mb-2">{item.title}</h2>
+              <h2 className="text-xl font-thin uppercase tracking-widest mb-2">
+                {item.title}
+              </h2>
               <p className="text-gray-700 text-sm font-light">{item.content}</p>
             </a>
           ) : (
@@ -71,22 +74,14 @@ function Contact() {
               <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mb-4 shadow-sm text-black">
                 {item.icon}
               </div>
-              <h2 className="text-xl font-thin uppercase tracking-widest mb-2">{item.title}</h2>
+              <h2 className="text-xl font-thin uppercase tracking-widest mb-2">
+                {item.title}
+              </h2>
               <p className="text-gray-700 text-sm font-light">{item.content}</p>
             </div>
           )
         )}
       </div>
-
-      {/* Download CV */}
-      <a
-        href="/cv.pdf"
-        download="Gaurav_Dhungana_CV"
-        className="bg-black text-white font-semibold py-3 px-10 rounded-md shadow hover:bg-gray-900 transition-all duration-300 transform hover:scale-105 flex items-center gap-3"
-      >
-        <FiDownload className="text-2xl" />
-        Download CV
-      </a>
     </div>
   );
 }

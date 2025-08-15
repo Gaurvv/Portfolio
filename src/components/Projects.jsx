@@ -1,30 +1,35 @@
 import React from "react";
+import { FiDownload } from "react-icons/fi";
+import { FiGithub } from "react-icons/fi";
 
 function Projects() {
   const projectsData = [
     {
       id: 1,
-      image: 'ecom.png',
-      title: 'E-Commerce Website',
-      description: 'A full-stack e-commerce solution with modern UI/UX, payment integration, and admin dashboard.',
-      technologies: ['React', 'Tailwind CSS', 'MongoDB', 'Express'],
-      link: 'https://e-com-gaauravz.vercel.app/',
+      image: "ecom.png",
+      title: "E-Commerce Website",
+      description:
+        "A full-stack e-commerce solution with modern UI/UX, payment integration, and admin dashboard.",
+      technologies: ["React", "Tailwind CSS", "MongoDB", "Express"],
+      link: "https://e-com-gaauravz.vercel.app/",
     },
     {
       id: 2,
-      image: 'Cal.png',
-      title: 'Simple Calculator',
-      description: 'A simple calculator for performing mathematical operations with a clean, intuitive interface.',
-      technologies: ['React', 'Tailwind CSS'],
-      link: 'https://calculator-gauravz.vercel.app/',
+      image: "Cal.png",
+      title: "Simple Calculator",
+      description:
+        "A simple calculator for performing mathematical operations with a clean, intuitive interface.",
+      technologies: ["React", "Tailwind CSS"],
+      link: "https://calculator-gauravz.vercel.app/",
     },
     {
       id: 3,
-      image: 'todo.png',
-      title: 'Todo Website',
-      description: 'A simple todo website where you can add your routine, notes and to-do list with real-time sync.',
-      technologies: ['React', 'Supabase', 'Tailwind CSS'],
-      link: 'https://todo-gaurav.vercel.app/',
+      image: "todo.png",
+      title: "Todo Website",
+      description:
+        "A simple todo website where you can add your routine, notes and to-do list with real-time sync.",
+      technologies: ["React", "Supabase", "Tailwind CSS"],
+      link: "https://todo-gaurav.vercel.app/",
     },
   ];
 
@@ -77,6 +82,15 @@ function Projects() {
               </div>
             </a>
           ))}
+          <div className="  col-span-full flex justify-center mt-10  ">
+            <a
+              href="https://github.com/Gaurvv"
+              className="bg-black text-white font-semibold py-3 px-10 rounded-md shadow hover:bg-gray-900 transition-all duration-300 transform hover:scale-105 flex items-center gap-3"
+            >
+              <FiGithub className="text-2xl" />
+              Visit GitHub
+            </a>
+          </div>
         </div>
       </div>
     </section>

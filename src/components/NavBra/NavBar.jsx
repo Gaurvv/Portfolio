@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FaRegUser } from 'react-icons/fa';
 import { TbBracketsAngle } from 'react-icons/tb';
-import { IoBagHandle } from 'react-icons/io5';
+import { IoBagRemoveOutline  } from 'react-icons/io5';
 import { CiMail } from 'react-icons/ci';
 import { IoMdMenu, IoMdClose } from 'react-icons/io';
 
@@ -36,7 +36,7 @@ function NavBar({ scrollToHome, scrollToSkills, scrollToProjects, scrollToContac
         <TbBracketsAngle className='text-lg' /> Skills
       </li>
       <li className={navItemStyles} onClick={() => { scrollToProjects(); closeMenu(); }}>
-        <IoBagHandle className='text-lg' /> Projects
+        <IoBagRemoveOutline  className='text-lg' /> Projects
       </li>
       <li className={navItemStyles} onClick={() => { scrollToContact(); closeMenu(); }}>
         <CiMail className='text-lg' /> Contact
